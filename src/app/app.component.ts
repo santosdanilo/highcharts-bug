@@ -9,7 +9,7 @@ import { delay, mergeMap, tap, switchMap, take } from 'rxjs/operators';
   template: `
     <main>
       <ga-chart class="stack" [title]="'gaga'" [options]="value" [traits]="'money'">
-      </ga-chart>
+    </ga-chart>
     </main>
   `,
   styles: [`
@@ -35,7 +35,7 @@ export class AppComponent {
       { data: [2, 3], type: 'bar', id: '1' },
       { data: [3, 4], type: 'bar', id: '2' }
     ]
-  } as Highcharts.Options)
+  })
 
   obs2 = of({
     chart: {
@@ -53,7 +53,7 @@ export class AppComponent {
       { data: [3, 4], type: 'line', id: '2' },
       { data: [5, 6], type: 'line', id: '3' }
     ]
-  } as Highcharts.Options)
+  })
   highchart = interval(3000).pipe(
     switchMap(t => iif(() => t % 2 == 0, this.obs1, this.obs2)),
     take(7)
