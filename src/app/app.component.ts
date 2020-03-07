@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { of, timer, iif, interval } from 'rxjs';
 import { delay, mergeMap, tap, switchMap, take } from 'rxjs/operators';
-import { Details } from 'chart-lib/public-api';
 
 
 
@@ -9,11 +8,8 @@ import { Details } from 'chart-lib/public-api';
   selector: 'app-root',
   template: `
     <main>
-      <ga-panel>
       <ga-chart class="stack" [title]="'gaga'" [options]="value" [traits]="'money'">
-        <ga-list-legend></ga-list-legend>
       </ga-chart>
-      </ga-panel>
     </main>
   `,
   styles: [`
@@ -65,7 +61,7 @@ export class AppComponent {
 
   value
 
-  consumoAgregadoDetails: Details<any> = {
+  consumoAgregadoDetails = {
     '0': {
       value: [1050, 1100, 1090, 1050, 1230, 1130, 1090, 1250, 1150, 1180, null, null].reduce((acc, value) => acc + (value || 0)),
       fraction: [

@@ -8,9 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { ChartModule } from 'projects/chart-lib/src/public-api';
-import { SharedModule } from 'projects/chart-lib/src/public-api';
-import { PanelModule } from 'projects/chart-lib/src/public-api';
+import { ChartModule } from '../../projects/chart-lib/src/public-api';
 
 // the second parameter 'fr-FR' is optional
 registerLocaleData(localePt);
@@ -22,8 +20,6 @@ registerLocaleData(localePt);
   imports: [
     BrowserModule,
     ChartModule,
-    SharedModule,
-    PanelModule,
     MatCheckboxModule,
     BrowserAnimationsModule
   ],
