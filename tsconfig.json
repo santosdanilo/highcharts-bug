@@ -31,5 +31,6 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "annotateForClosureCompiler": true,
+    "experimentalDecorators": true
   }
 }

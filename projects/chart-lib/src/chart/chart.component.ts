@@ -10,7 +10,7 @@ import { merge } from 'lodash/fp'
   selector: 'ga-chart',
   template: `
     <header class="chart-title">{{title}}</header>
-    <div class="chart-box" [ngClass]="{'fill-box': !legend}">
+    <div class="chart-box">
       <highcharts-chart *ngIf="!!options"
             [Highcharts]="Highcharts"
             [options]="options"
@@ -18,7 +18,6 @@ import { merge } from 'lodash/fp'
             (chartInstance)="getInstance($event)"
             class="box">
       </highcharts-chart>
-      <ng-content></ng-content>
     </div>
   `,
   styleUrls: ['./chart.component.scss'],
