@@ -27,7 +27,7 @@
     "d3-format": "^1.4.3",
     "chart-lib": "file:projects/chart-lib",
     "hammerjs": "^2.0.8",
-    "highcharts": "^8.0.0",
+    "highcharts": "^9.0.0",
     "highcharts-angular": "^2.4.0",
     "lodash": "^4.17.15",
     "rxjs": "~6.4.0",
